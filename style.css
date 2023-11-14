@@ -1,0 +1,73 @@
+@font-face {
+    font-family: great_vibes;
+    src: url(Fonts/Great_Vibes/GreatVibes-Regular.ttf);
+}
+@font-face {
+    font-family: quattrocento_sans;
+    src: url(Fonts/Quattrocento_Sans/QuattrocentoSans-Regular.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: quattrocento_sans;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    backdrop-filter: blur(20px);
+
+}
+
+.logo {
+    font-family: great_vibes;
+    font-size: 3em;
+    color: rgb(227, 189, 162);
+    user-select: none;
+}
+
+.navigation a {
+    color: rgb(82, 68, 62);
+    text-decoration: none;
+    font-size: 1.1em;
+    position: relative;
+    margin-left: 40px;
+    font-weight: 600;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: rgb(243, 231, 212);
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('forest-4561344_1280.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
