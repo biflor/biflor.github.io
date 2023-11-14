@@ -29,7 +29,7 @@ header {
 
 .logo {
     font-family: great_vibes;
-    font-size: 3em;
+    font-size: 3vw;
     color: rgb(227, 189, 162);
     user-select: none;
 }
